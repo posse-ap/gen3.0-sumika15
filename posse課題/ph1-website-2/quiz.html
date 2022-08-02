@@ -7,12 +7,13 @@
     <title>ITクイズ</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./quiz.css">
+    <script src="../assets/scripts/quiz2.js" defer></script>
   </head>
   <body>
     <!-- START HEADER -->
     <header id="header" class="wrapper">
       <div class="logo-image">
-        <img class="header-logo" src="/assets/img/logo.svg" alt="POSSEロゴ" />
+        <img class="header-logo" src="../assets/img/logo.svg" alt="POSSEロゴ" />
       </div>
       <div class="header-list">
         <ul>
@@ -20,12 +21,12 @@
           <li><a href="#quiz">クイズ</a></li>
           <li>
             <a href=""
-              ><img src="/assets_sample/img/icon/icon-twitter.svg" alt=""
+              ><img src="../assets_sample/img/icon/icon-twitter.svg" alt=""
             /></a>
           </li>
           <li>
             <a href=""
-              ><img src="/assets_sample/img/icon/icon-instagram.svg" alt=""
+              ><img src="../assets_sample/img/icon/icon-instagram.svg" alt=""
             /></a>
           </li>
         </ul>
@@ -47,21 +48,18 @@
         <div class="container">
           <span class="q-box-title">Q1</span>
           <span class="q-box-content">日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？</span>
-          <figure class="hero-picture">
-            <img src="../assets_sample/img/quiz/img-quiz01.png" alt="">
-          </figure>
+            <img class="hero-picture" src="../assets_sample/img/quiz/img-quiz01.png" alt="">
           <span class="q-box-answer">A</span>
             <ul class="answer-list">
-              <li class="answer-list-item-first"><a href="#">約28万人</a>
-                <div class="triangle"></div></li>
-              <li class="answer-list-item-middle"><a href="#">約79万人</a><div class="triangle"></div></li>
-              <li class="answer-list-item-end"><a href="#">約183万人</a><div class="triangle"></div></li>
+              <li class="answer-list-item"><a href="#">約28万人</a><div class="triangle"></div></li>
+              <li class="answer-list-item"><a href="#">約79万人</a><div class="triangle"></div></li>
+              <li class="answer-list-item"><a href="#">約183万人</a><div class="triangle"></div></li>
             </ul>
         </div>
-        <blockquote class="q-box-note">
-          <img src="../assets_sample/img/icon/icon-note.svg" alt="">
+        <div class="q-box-note">
+          <img class="details" src="../assets_sample/img/icon/icon-note.svg" alt="">
           経済産業省2019年3月ITー人材需給に関する調査
-        </blockquote>
+        </div>
       </section>
       <section class="Q-box">
         <div>
@@ -72,9 +70,9 @@
           </figure>
           <span class="q-box-answer">A</span>
           <ul class="answer-list">
-            <li class="answer-list-item-first"><a href="#">INTECH</a><div class="triangle"></div></li>
-            <li class="answer-list-item-middle"><a href="#">BIZZTECH</a><div class="triangle"></div></li>
-            <li class="answer-list-item-end"><a href="#">X-TECH</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">INTECH</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">BIZZTECH</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">X-TECH</a><div class="triangle"></div></li>
           </ul>
         </div>
       </section>
@@ -87,9 +85,9 @@
           </figure>
           <span class="q-box-answer">A</span>
           <ul class="answer-list">
-            <li class="answer-list-item-first"><a href="#">Internet of things</a><div class="triangle"></div></li>
-            <li class="answer-list-item-middle"><a href="#">Integrate into Technology</a><div class="triangle"></div></li>
-            <li class="answer-list-item-end"><a href="#">Information on Tool</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Internet of things</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Integrate into Technology</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Information on Tool</a><div class="triangle"></div></li>
           </ul>          
         </div>        
       </section>
@@ -102,15 +100,15 @@
           </figure>
           <span class="q-box-answer">A</span>
           <ul class="answer-list">
-            <li class="answer-list-item-first"><a href="#">Society5.0</a><div class="triangle"></div></li>
-            <li class="answer-list-item-middle"><a href="#">Cyphy</a><div class="triangle"></div></li>
-            <li class="answer-list-item-end"><a href="#">SDGs</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Society5.0</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Cyphy</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">SDGs</a><div class="triangle"></div></li>
           </ul>
         </div>
-        <blockquote class="q-box-note">
+        <div class="q-box-note">
           <img src="../assets_sample/img/icon/icon-note.svg" alt="">
           Society5.0-科学技術政策―内閣府
-        </blockquote>
+        </div>
       </section>
       <section class="Q-box">
         <div>
@@ -121,9 +119,9 @@
           </figure>
           <span class="q-box-answer">A</span>
           <ul class="answer-list">
-            <li class="answer-list-item-first"><a href="#">Web3.0</a><div class="triangle"></div></li>
-            <li class="answer-list-item-middle"><a href="#">NFT</a><div class="triangle"></div></li>
-            <li class="answer-list-item-end"><a href="#">メタバース</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">Web3.0</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">NFT</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">メタバース</a><div class="triangle"></div></li>
           </ul>
         </div>
         <div class="q-box-answer-triangle"></div>
@@ -131,21 +129,21 @@
       <section class="Q-box">
         <div>
           <span class="q-box-title">Q6</span>
-          <span class="q-box-content">イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？</span>
+          <span class="q-box-content">先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？ </span>
           <figure class="hero-picture">
             <img src="../assets_sample/img/quiz/img-quiz06.png" alt="">
           </figure>
           <span class="q-box-answer">A</span>
           <ul class="answer-list">
-            <li class="answer-list-item-first"><a href="#">約2倍</a><div class="triangle"></div></li>
-            <li class="answer-list-item-middle"><a href="#">約5倍</a><div class="triangle"></div></li>
-            <li class="answer-list-item-end"><a href="#">約11倍</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">約2倍</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">約5倍</a><div class="triangle"></div></li>
+            <li class="answer-list-item"><a href="#">約11倍</a><div class="triangle"></div></li>
           </ul>
         </div>
-        <blockquote class="q-box-note">
+        <div class="q-box-note">
           <img src="../assets_sample/img/icon/icon-note.svg" alt="">
           Accenture Technology Vision 2021
-        </blockquote>
+        </div>
       </section> 
     </main>
       <section id="contact" class="wrapper">

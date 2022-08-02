@@ -31,7 +31,7 @@ li {
   justify-content: space-between;
   text-align: center;
   margin: 40px;
-  padding:15px 24px;
+  padding: 10px 24px;
 }
 .header-logo {
   width: 150px;
@@ -173,9 +173,9 @@ li {
   margin-left: auto;
   margin-top: -27px;
 }
-.answer-list-item-first{
+.answer-list-item{
   background: #ffffff;
-  border: 5px solid #eeeeee;
+  border: 5px solid #EEEEEE;
   border-radius: 8px;
   width: 100%;
   height: 80px;
@@ -188,36 +188,17 @@ li {
   font-size: 18px;
   line-height: 180%;
 }
-.answer-list-item-middle{
-  background: #ffffff;
-  border: 5px solid #eeeeee;
-  border-radius: 8px;
-  width: 100%;
-  height: 80px;
-  padding: 24px;
-  text-align: left;
-  box-sizing: border-box;
-  font-family: 'Noto Sans JP';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 180%;
-}
-.answer-list-item-end{
-  background: #ffffff;
-  border: 5px solid #eeeeee;
-  border-radius: 8px;
 
-  height: 80px;
-  padding: 24px;
-  text-align: left;
-  box-sizing: border-box;
-  font-family: 'Noto Sans JP';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 180%;
+.answer-container {
+  position: absolute;
+  width: 984px;
+  height: 142px;
+  left: 0px;
+  top: 0px;
+  background: #EFF2F5;
+  border-radius: 8px;
 }
+
 .q-box-note{
   text-align: left;
   padding: 24px 0;
@@ -394,6 +375,14 @@ li {
   letter-spacing: 0.1em;
   line-height: 1.5;
   padding: 38px 24px 33px;
+}
+.pass{
+  background-color: #0071bc;
+  color:#ffff;
+}
+.failed{
+  background-color: #bc0000;
+  color:#ffff;
 }
 
 
