@@ -676,11 +676,11 @@ body {
 .p-quiz-box__answer__button:disabled .u-icon__arrow {
   display: none;
 }
-.p-quiz-box__answer__button.is-selected {
+.p-quiz-box__answer__button .is-selected {
   background-color: #eff2f5;
   border-color: #0071bc;
 }
-.p-quiz-box__answer__button.is-selected .u-icon__arrow {
+.p-quiz-box__answer__button .is-selected .u-icon__arrow {
   display: none;
 }
 .p-quiz-box__note {
@@ -703,10 +703,10 @@ body {
   margin-top: 16px;
   padding: 24px 40px;
 }
-.p-quiz-box__answer__correct.is-correct {
+.p-quiz-box__answer__correct .is-correct {
   display: block;
 }
-.p-quiz-box__answer__correct.is-incorrect {
+.p-quiz-box__answer__correct .is-incorrect {
   background-color: #eff2f5;
   display: block;
 }
