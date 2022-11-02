@@ -20,7 +20,7 @@ const Question = [
     reference: 'Society5.0 - 科学技術政策 - 内閣府'
 },
 {
-    question: 'イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？',
+    question: '日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？',
     answers: ['Society 5.0', 'CyPhy', 'SDGs'],
     correct: 0,
 },
@@ -48,14 +48,14 @@ const quiz = document.getElementById('main');
     ).join('');
 
     const referenceHtml = questionLater.reference ? `<div class="q-box-note">
-<img class="details" src="/assets_sample/img/icon/icon-note.svg" alt="">
-${questionLater.reference}</div>` : '';
+<img class="details" src="/posse課題/assets/img/icon/icon-note.svg" alt="">
+<div class="reference">${questionLater.reference}</div></div>` : '';
 
     return `<section class="Q-box js-quiz" data-quiz="${questionNum}">
 <div class="container">
   <span class="q-box-title">Q${questionNum + 1}</span>
   <span class="q-box-content">${questionLater.question}</span>
-    <img class="hero-picture" src="/assets_sample/img/quiz/img-quiz0${questionNum + 1}.png" alt="">
+    <img class="hero-picture" src="/posse課題/assets/img/quiz/img-quiz0${questionNum + 1}.png" alt="">
   <span class="q-box-answer">A</span>
     <ul class="answer-list">
         ${answerHtml}
@@ -67,11 +67,10 @@ ${questionLater.reference}</div>` : '';
             <span class="js-answerText"></span>
         </p>
     </div>
-</div>
 ${referenceHtml}
 </section>`
 }
-
+    
 const shuffle = arrays => {
     const array = arrays.slice();
 for (let i = array.length - 1; i >= 0; i--) {
