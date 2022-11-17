@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webapp</title>
+    <link rel="stylesheet" href="./assets/style/reset/reset.css" />
+    <link rel="stylesheet" href="./webapp.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <img src="./assets/img/logo.svg" alt="" />
+        <p>4th week</p>
+      </div>
+
+      <button class="record-button js-record-button"">
+        <a href="#">記録・投稿</a>
+      </button>
+    </header>
+    <main>
+      <div class="log">
+        <div class="log-hour" id="A">
+          <div class="hour-theme">Today</div>
+          <div class="hour-count">3</div>
+          <div class="hour-hour">hour</div>
+        </div>
+        <div class="log-hour" id="B">
+          <div class="hour-theme">Month</div>
+          <div class="hour-count">120</div>
+          <div class="hour-hour">hour</div>
+        </div>
+        <div class="log-hour" id="C">
+          <div class="hour-theme">Total</div>
+          <div class="hour-count">1348</div>
+          <div class="hour-hour">hour</div>
+        </div>
+        <div class="log-chart" id="D">
+        <div>
+        <canvas class="bar-chart" id="japanese_people_chart"></canvas>
+        </div>
+        </div>
+        <div class="log-graph-language" id="E"> 
+        <div>   
+        <canvas id="sushi_circle"></canvas>
+        </div>
+        </div> 
+        <div class="log-graph-content" id="F">   
+        <div>  
+        <canvas id="sushi">
+        </canvas>
+        </div>
+        </div>
+        <div class="data">
+          <p>2020年10月</p>
+        </div>
+        </div>
+
+
+        <div class="modal-container js-modal-container">
+          <div class="mask"></div>
+          <div class="modal">
+            <button class="modal-button js-close-button"></button>
+            <div class="modal-inner">
+              <div class="modal-content">
+                <p>学習日</p>
+                <input type="text" id="study-date">
+                <p>学習コンテンツ（複数選択可）</p>
+                <div class="study-contents">
+                  <label id="N-yobi">
+                    <input type="checkbox">N予備校
+                  </label>
+                  <label id="dotto-instal">
+                    <input type="checkbox">ドットインストール
+                  </label>
+                  <label id="POSSE-assignment">
+                    <input type="checkbox">POSSE課題
+                  </label>
+                </div>
+              </div>
+              <div class="modal-content"></div>
+            </div>
+          </div>
+    </main>
+  </body>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="./assets/script/webapp.js"></script>
+  <script src="./assets/script/chart.js"></script>
+</html>
