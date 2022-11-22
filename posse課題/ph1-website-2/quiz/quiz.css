@@ -1,0 +1,681 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+  line-height: 1.15;
+}
+body {
+  color: #24292e;
+  margin: 0;
+  font-family: 'Noto Sans JP',sans-serif;
+  
+}
+main{
+  display: block;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color:#24292e;
+}
+img {
+  vertical-align: bottom;
+}
+h1{
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* START HEADER */
+.header{
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 5px 24px;
+  justify-content: space-between;
+}
+
+/* pc版 */
+.header-logo{
+  width: 148px;
+  padding: 0;
+}
+.ham-container{
+  position: absolute;
+  right: 0;
+
+}
+.p-header-nav-list{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.p-header-nav-list li{
+  font-size: 14px;
+  font-family: 'Noto Sans JP';
+  font-weight: bold;
+  color: #6666;
+}
+.header-sns{
+  display: flex;
+  gap: 16px;
+}
+.header-sns a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #EEEE;
+}
+
+.header_official{
+  display: none;
+}
+
+
+/* ハンバーガーメニュー */
+@media screen and (max-width: 768px) {
+
+  .header-logo{
+    width: 120px;
+  }
+
+  .p-header-nav-list{
+    display: none;
+  }
+
+  .active.header .header-inner {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      margin-top: 38px;
+      inset: 0;
+      opacity: 0;
+      padding: 76px 0px;
+      position: fixed;
+      transition: opacity 0.4s, visibility 0.4s;
+      visibility: hidden; 
+    }
+  .active.header .header-inner{ 
+    opacity: 1;
+    visibility: visible;
+  }
+  .ham-li{
+    margin-bottom: 24px;
+  }
+.p-header-nav-item-link{
+  font-size: 24px;
+  font-weight: 700;
+}
+.header_official{
+  background-color: #5FDF5B;
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 330px auto 0 auto;
+  width: 343px;
+  height: 60px;
+}
+.official-site{
+  margin-top: 24px;
+}
+.header-sns{
+  margin-top: 20px;
+  justify-content: center;
+}
+.inner-line-icon{
+  background: radial-gradient(#fff 60%, transparent 60%);
+}
+  .header-inner{
+    text-align: center;
+  }
+  .inner-line-icon{
+    width: 40px;
+    height: 40px;
+  }
+  .header-button{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 38px;
+    background: #fff;
+  }
+
+  .header-button span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    background-color: #666;
+  }
+  .is-open{
+    display: block;
+  }
+  .header-button span:nth-of-type(1) {
+    top:22px; 
+      width: 50%;
+  }
+  
+  .header-button span:nth-of-type(2) {
+    top:29px;
+      width:50%;
+  }
+.is-open span:nth-of-type(1){
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+  }
+.is-open span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+}
+
+
+}
+
+/* END HEADER
+-----------------------*/
+
+.hero-container{
+  background-image: url(/posse課題/assets/img/quiz/bg-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  margin-top: 56px;
+}
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  padding: 110px 204px;
+}
+.hero-title {
+  width: 96px;
+  height: 32px;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #eff2f5;
+}
+.hero-theme {
+  width: 236px;
+  height: 90px;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container{
+    width: 100%;
+    height: 159px;
+  }
+  .hero-content{
+    padding: 60px 32px;
+  }
+  .hero-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 180%;
+  }
+  .hero-theme{
+    font-weight: 700;
+    font-size:28px;
+    line-height: 150%;
+  }
+}
+
+.container{
+  width: 984px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Q-box{
+    display:block;
+    margin-top: 150px;
+}
+
+
+.q-box-title {
+  display: inline-block;
+  padding: 8px 16px;
+  text-align: center;
+  background: #0071bc;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.q-box-content {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  text-align: justify;
+  color: #333333;
+  margin-top:24px;
+}
+
+.hero-picture{
+  display:block;
+  max-width: 718px;
+  width: 100%;
+  height: auto;
+  margin:64px auto 0;
+  text-align: center;
+}
+.q-box-answer{
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  text-align: center;
+  width: 58px;
+  height: 70px;
+  border-radius: 8px;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 70px;
+  color: #ffffff;
+  background-color: #E34E70;
+}
+.answer-list{
+  gap: 24px;
+  display: flex;
+  margin-top: 16px;
+}
+.answer-list-item{
+  max-width: 312px;
+  width: 100%;
+}
+.q-box-note{
+  text-align: left;
+  padding: 24px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-left: 32px;
+  margin-top: 20px;
+  background: #F6F6F6;
+  border-radius: 8px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%;
+
+  }
+  .Q-box{
+    margin-top: 80px;
+  }
+  .q-box-title{
+    font-size: 24px;
+  }
+  .hero-picture{
+    margin-top: 24px;
+  }
+  .q-box-content{
+    margin-top: 16px;
+    font-size: 18px;
+  }
+  .q-box-answer{
+    margin-top: 24px;
+  }
+  .answer-list{
+    flex-direction: column;
+  }
+  .answer-list-item{
+    height: 54px;
+    margin-top: 8px;
+    max-width: 100%;
+  }
+  .q-box-note{
+    display: flex;
+    margin-top: 16px;
+    padding: 24px;
+    font-size: 14px;
+  }
+  .reference{
+    margin-left: 16px;
+  }
+}
+
+
+.p-quiz-box__answer__button.is-selected {
+  background-color: #eff2f5;
+  border-color: #0071bc;
+}
+.p-quiz-box__answer__button.is-selected .u-icon__arrow {
+  display: none;
+}
+.p-quiz-box__answer__button .u-icon__arrow {
+  font-size: 16px;
+  margin-left: auto;
+}
+.p-quiz-box__answer__button:disabled .u-icon__arrow {
+  display: none;
+}
+.u-icon_arrow{
+  width: 0;
+  height: 0;
+  border-left: 10px solid black;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: auto;
+  border-radius: 20%;
+}
+
+.correct-container {
+  background-color: #fff2f5;
+  border-radius: 8px;
+  display: none;
+  margin-top: 16px;
+  padding: 24px 40px;
+}
+
+.correct-container.is-correct {
+  display: block;
+}
+.correct-container.is-incorrect {
+  background-color: #eff2f5;
+  display: block;
+}
+.p-quiz-box__answer__correct__title{
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.is-correct .p-quiz-box__answer__correct__title{
+  color: #e34e70;
+}
+.is-incorrect .p-quiz-box__answer__correct__title{
+  color: #0071bc;
+}
+
+.p-quiz-box__answer__correct__content__label {
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 24px;
+}
+.is-correct .p-quiz-box__answer__correct__title {
+  color: #e34e70;
+}
+.is-incorrect .p-quiz-box__answer__correct__title {
+  color: #0071bc;
+}
+
+.p-quiz-box__answer__button {
+  align-items: center;
+  border: solid 5px #eee;
+  border-radius: 8px;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  padding: 19px;
+  text-align: left;
+  width: 100%;
+}
+.p-quiz-box__answer__button .u-icon__arrow {
+  font-size: 16px;
+  margin-left: auto;
+}
+.p-quiz-box__answer__button:disabled .u-icon__arrow {
+  display: none;
+}
+.p-quiz-box__answer__button .is-selected {
+  background-color: #eff2f5;
+  border-color: #0071bc;
+}
+.p-quiz-box__answer__button .is-selected .u-icon__arrow {
+  display: none;
+}
+
+.answer__correct__content{
+  align-items: baseline;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 18px;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+/* START CONTACT
+-----------------------*/
+#contact{
+  width: 984px;
+  height: 357px;
+  margin-top: 140px;
+  justify-content: center;
+  margin: 140px auto;
+  position: relative;
+}
+.background-color{
+  width: 984px;
+  height: 357px;
+  background-color: rgba(0, 113, 188, 0.9);
+  border-radius: 48px;
+  z-index: 0;
+  position: absolute;
+}
+.background-image{
+  width: 984px;
+  height: 357px;
+  background: url(/posse課題/assets/img/bg-line.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 48px;
+  position: absolute;
+}
+
+.contact-title{
+  text-align: center;
+  align-items: center;
+  font-size: 36px;
+  color: #eee;
+  margin-top: 81px;
+} 
+
+.line-icon{
+  width:45px;
+  height: 45px;
+  background: radial-gradient(#fff 60%, transparent 60%);
+}
+
+.more{
+  text-align: center;
+  margin-top: 16px;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #eee;
+  letter-spacing: 0.1rem;
+  margin-bottom: 24px;
+}
+
+.btn-area{
+  width: 320px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  margin: 0 auto;
+  background-color: #eee;
+  border-radius: 98px;
+  color: #666;
+}
+.u-icon-link{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+@media screen and (max-width: 768px) {
+
+#contact{
+  max-width: 90%;
+  margin: 120px auto;
+  justify-content: center;
+}
+.background-image{
+  width: 100%;
+  height: 372px;
+}
+.background-color{
+  width: 100%;
+  height: 372px;
+}
+.contact-title-container{
+  gap: 8px;
+}
+.contact-title{
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+  font-size: 24px;
+}
+.more{
+  text-align: left;
+  padding: 0 24px;
+}
+.btn-area{
+  justify-content: center;
+  width: 295px;
+  height: 50px;
+}
+
+}
+/* END CONTACT
+-----------------------*/
+
+/* フッター */
+
+
+.p-fixedLine {
+  bottom: 16px;
+  position: fixed;
+  right: 16px;
+  text-align: center;
+}
+.p-fixedLine__link {
+  align-items: center;
+  background-color: #5FDF5B;
+  border-radius: 16px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  padding: 20px 20px;
+  padding-right: 50px;
+}
+.p-fixedLine__link .u-icon__line {
+  font-size: 36px;
+  position:relative;
+  right: -35px;
+  width: 38px;
+  
+}
+.fixed-background-color{
+  font-size: 36px;
+  width:30px;
+  height: 30px;
+  background-color: #fff;
+}
+.p-fixedLine__link .u-icon__link {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 35px;
+}
+.p-fixedLine__link__text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  margin-left: 13px;
+  text-align: left;
+}
+
+.l-footer {
+  border-top: solid 1px #eee;
+}
+.l-footer__inner {
+  padding: 56px 24px 48px;
+}
+.p-footer {
+  margin-top: 80px;
+  text-align: center;
+}
+.p-footer__logo {
+  display: block;
+}
+.p-footer__siteinfo__link {
+  color: #666;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.p-footer__sns__list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.p-footer__copyright {
+  border-top: solid 1px #eee;
+  color: #666;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  padding: 38px 24px 33px;
+}
+
+
+
+
+
+
