@@ -5,7 +5,7 @@ const w = $(".contents").width("690px");
 const h = $(".contents").height("350px");
 const log_chart = $(".log-chart");
 $("#japanese_people_chart").attr("width", log_chart.width());
-$("#japanese_people_chart").attr("height", 350);
+$("#japanese_people_chart").attr("height", 300);
 
 
 
@@ -15,45 +15,46 @@ new Chart(context, {
   type: "bar",
   data: {
     labels: [
-      "",
+      "1",
       "2",
-      "",
+      "3",
       "4",
-      "",
+      "5",
       "6",
-      "",
+      "7",
       "8",
-      "",
+      "9",
       "10",
-      "",
+      "11",
       "12",
-      "",
+      "13",
       "14",
-      "",
+      "15",
       "16",
-      "",
+      "17",
       "18",
-      "",
+      "19",
       "20",
-      "",
+      "21",
       "22",
-      "",
+      "23",
       "24",
-      "",
+      "25",
       "26",
-      "",
+      "27",
       "28",
-      "",
+      "29",
       "30",
-    ],
+    ],    
     datasets: [
       {
-        background: ["#1ebede"
+        backgroundColor: ["#1ebede",
 
-      ],
+        ],
+      
         data: [
           2.1, 2.5, 5.6, 6, 4, 5, 7, 8, 7, 6, 4, 3, 2, 1, 4, 5, 6, 7, 7, 3, 5,
-          4, 5, 6, 7, 3,4,7,3
+          4, 5, 6, 7, 3,4,7,3,5
         ],
       },
     ],
@@ -63,6 +64,18 @@ new Chart(context, {
         x:{
             min: 0,
             max: 30,
+            ticks: {
+              stepSize: 2,
+              callback: function(value){
+                if(value % 2 != 0  && value != 0){
+                  return value + 1;
+                };
+              }
+            },
+            grid: {
+              drawBorder: false,
+              display: false,
+            },
         },
         y:{
             max: 8,
@@ -73,16 +86,15 @@ new Chart(context, {
                     return value + 'h';
                 }
             },
+            grid: {
+              drawBorder: false,
+              display: false,
+            },
         },
         
     },
     responsive: false,
-    plugins: {
-
-      legend: {
-        display: false,
-      },
-    },
+    plugins: false,
   },
 }
 );
@@ -126,12 +138,12 @@ window.addEventListener("load", function () {
       ],
     },
     options: {
-      responsive: false,
+      responsive: true,
       plugins: {
         datalabels: {
           color: "#fff",
           font: {
-            size: 20,
+            size: 10,
           },
           formatter: (value, ctx) => {
             return value + "%";
@@ -165,13 +177,13 @@ window.addEventListener("load", function () {
       ],
     },
     options: {
-      responsive: false,
+      responsive: true,
       plugins: {
 
         datalabels: {
           color: "#fff",
           font: {
-            size: 20,
+            size: 10,
           },
           formatter: (value, ctx) => {
             return value + "%";

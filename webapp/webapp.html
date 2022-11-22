@@ -7,6 +7,7 @@
     <title>webapp</title>
     <link rel="stylesheet" href="./assets/style/reset/reset.css" />
     <link rel="stylesheet" href="./webapp.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -15,7 +16,7 @@
         <p>4th week</p>
       </div>
 
-      <button class="record-button js-record-button"">
+      <button class="record-button js-record-button pc-button">
         <a href="#">記録・投稿</a>
       </button>
     </header>
@@ -42,46 +43,125 @@
         </div>
         </div>
         <div class="log-graph-language" id="E"> 
+          <p>学習言語</p>
         <div>   
-        <canvas id="sushi_circle"></canvas>
-        </div>
-        </div> 
-        <div class="log-graph-content" id="F">   
-        <div>  
-        <canvas id="sushi">
+        <canvas class="circle" id="sushi_circle">
         </canvas>
         </div>
+          <ul>
+            <li class="study-contents-usageguide1">Javascript</li>
+            <li class="study-contents-usageguide2">CSS</li>
+            <li class="study-contents-usageguide3">PHP</li>
+          <!-- </ul>
+          <ul> -->
+            <li class="study-contents-usageguide4">HTML</li>
+            <li class="study-contents-usageguide5">Laravel</li>
+            <li class="study-contents-usageguide6">SQL</li>
+          <!-- </ul>
+          <ul> -->
+            <li class="study-contents-usageguide7">SHELL</li>
+            <li class="study-contents-usageguide8">情報システム基礎知識</li>
+          </ul>
+      </div>
+        <div class="log-graph-content" id="F">   
+          <p>学習コンテンツ</p>
+        <div>  
+        <canvas class="circle" id="sushi">
+        </canvas>
+          <ul>
+            <li class="study-contents-usageguide1">ドットインストール</li>
+            <li class="study-contents-usageguide2">N予備校</li>
+            <li class="study-contents-usageguide3">POSSE課題</li>
+          </ul>
         </div>
-        <div class="data">
-          <p>2020年10月</p>
         </div>
-        </div>
+      </div>
+        <footer class="data">
+          <span class="data-parentheses dp1"><</span><span>2022年10月</span><span class="data-parentheses">></span>
+        </footer>
+        <button class="record-button js-record-button sp-button">
+          <a href="#">記録・投稿</a>
+        </button>
+
 
 
         <div class="modal-container js-modal-container">
           <div class="mask"></div>
-          <div class="modal">
-            <button class="modal-button js-close-button"></button>
-            <div class="modal-inner">
-              <div class="modal-content">
-                <p>学習日</p>
-                <input type="text" id="study-date">
-                <p>学習コンテンツ（複数選択可）</p>
-                <div class="study-contents">
-                  <label id="N-yobi">
-                    <input type="checkbox">N予備校
-                  </label>
-                  <label id="dotto-instal">
-                    <input type="checkbox">ドットインストール
-                  </label>
-                  <label id="POSSE-assignment">
-                    <input type="checkbox">POSSE課題
+            <div class="modal">
+              <button class="modal-button js-close-button" id="1"></button>
+              <div id="modal-display">
+                <div class="modal-inner">
+                <div class="modal-content">
+                  <p>学習日</p>
+                    <!-- <input type="text" id="study-about datepicker"> -->
+                    <input type="date" name="birthday"id="study-about">
+                      <p>学習コンテンツ（複数選択可）</p>
+                        <div class="study-contents">
+                          <label id="N-yobi">
+                            <input type="checkbox">N予備校
+                          </label>
+                          <label id="dotto-instal">
+                            <input type="checkbox">ドットインストール
+                          </label>
+                          <label id="POSSE-assignment">
+                            <input type="checkbox">POSSE課題
+                          </label>
+                        </div>
+                  <p>学習言語(複数選択可）</p>
+                    <div class="study-languages">
+                      <label id="">
+                        <input type="checkbox">HTML
+                      </label>
+                      <label id="">
+                        <input type="checkbox">CSS
+                      </label>
+                      <label id="">
+                        <input type="checkbox">JavaScript
+                      </label>
+                      <label id="">
+                        <input type="checkbox">PHP
+                      </label> 
+                      <label id="">
+                        <input type="checkbox">Laravel
+                      </label>                 
+                      <label id="">
+                        <input type="checkbox">SQL
+                      </label>                  
+                      <label id="SHELL">
+                        <input type="checkbox">SHELL
+                      </label>                  
+                      <label id="">
+                        <input type="checkbox">情報システム基礎知識（その他）
+                      </label>
+                    </div>
+                </div>
+                <div class="modal-content">
+                  <p>学習時間</p>
+                    <input type="text" id="study-about">
+                  <p>Twitter用コメント</p>
+                      <input type="text" id="comment-twitter">
+                  <label id="">
+                      <input type="checkbox" id="twitter-checkbox">Twitterにシェアする
                   </label>
                 </div>
-              </div>
-              <div class="modal-content"></div>
+                </div>
+            <button class="modal-record-button" id="2">
+              <a href="#">記録・投稿</a>
+            </button>
             </div>
           </div>
+          
+<!-- モーダルローディング -->
+            <div class="loading">
+              <div class="loader003"></div>
+            </div>
+
+<!-- 完了ボタン -->
+            <div class="finish-window" id="js-finish-window">
+              <p class="finish-window-done-color">awesome!</p>
+              <span class="finish-window-done finish-window-done-color"></span>
+              <p>記録・投稿<br>完了しました</p>
+            </div>
     </main>
   </body>
 
